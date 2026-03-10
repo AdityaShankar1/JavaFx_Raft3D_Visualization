@@ -2,19 +2,13 @@
 
 Visualization of Raft consensus algorithm for 3d printers using JavaFx (GUI), Spring Boot (REST API Endpoints GET/POST) and RabbitMQ (Message Broker) in Java 21.
 
-## Overview
+## Project Overview
 
-This project visualizes the Raft consensus algorithm using a 3-node cluster. Each node is a Spring Boot application that communicates with the others using RabbitMQ. The state of each node is visualized in real-time using a JavaFX 3D GUI.
+### The Raft Consensus Algorithm
 
-Nodes transition through three states:
+This project implements and visualizes the Raft lifecycle for 3D printers using a 3 node cluster. Each node is a Spring Boot application that communicates with the others using RabbitMQ. The state of each node is visualized in real-time using a JavaFX GUI.
 
-- 🔵 **FOLLOWER (Blue)**: The default state. Nodes wait for heartbeats from the leader.
-- 🟠 **CANDIDATE (Orange)**: If a follower doesn't receive a heartbeat within its randomized election timeout (3-5s), it becomes a candidate and requests votes.
-- 🟢 **LEADER (Green)**: The winner of the election. It sends periodic heartbeats (every 1s) to maintain authority. To simulate a realistic cluster, the leader automatically steps down after a randomized tenure (4-7s), forcing a new election sequence.
-
-## The Raft Consensus Algorithm:
-
-This project implements and visualizes the Raft lifecycle. For a quick visual understanding refer to the image below:
+For a quick visual understanding refer to the image below:
 
 <p align="center">
 <img width="553" height="240" alt="Raft State Machine Diagram" src="https://github.com/user-attachments/assets/770165d4-c92d-48b9-9f7c-686ae337c506" />
@@ -23,19 +17,26 @@ This project implements and visualizes the Raft lifecycle. For a quick visual un
 
 In a distributed system, Raft ensures all nodes agree on a single source of truth, even if some nodes fail.
 
-**Follower:** The starting state. Nodes remain here as long as they receive regular "heartbeats" from a Leader.
+Nodes transition through three states:
 
-**Candidate**: If a Follower stops hearing from the Leader, it "times out," increments its term, and asks other nodes for votes.
+- 🔵 **FOLLOWER (Blue)**: The default state.Nodes remain here as long as they receive regular "heartbeats" from a Leader.
+- 🟠 **CANDIDATE (Orange)**: If a follower doesn't receive a heartbeat within its randomized election timeout (3-5s), it becomes a candidate and requests votes.
+- 🟢 **LEADER (Green)**: The winner of the election. If a Candidate receives a majority of votes, it becomes the Leader and begins sending periodic heartbeats (every 1s) to maintain authority.
+- ***Note***: *To simulate a realistic and dynamic cluster, the leader automatically steps down after a randomized tenure (4-7s), forcing a new election sequence.*
 
-**Leader**: If a Candidate receives a majority of votes, it becomes the Leader and begins sending heartbeats to maintain authority.
-
-**Note**: To simulate a dynamic cluster environment, this visualization forces the Leader to step down after a while triggering a fresh election cycle.
-
-## Prerequisites
+### Prerequisites
 
 - **Java 21** (e.g., BellSoft Liberica JDK with JavaFX bundled)
 - **RabbitMQ** running on `localhost:5672` (default guest/guest credentials)
 - **Maven** (Wrapper included in project)
+
+## Technical Stack
+
+- **Language** : Java 21 LTS
+- **REST APIs**: Spring Boot 4.0
+- **Build Tool**: Maven
+- **Message Broker**: RabbitMQ
+- **GUI**: JavaFX 
 
 ## Running the Project
 
@@ -92,3 +93,5 @@ Open a 4th terminal and run the GUI:
 <img width="589" height="256" alt="image" src="https://github.com/user-attachments/assets/93adff25-c243-4d7c-984e-d6a7ac5d0534" />
 
 <img width="586" height="321" alt="image" src="https://github.com/user-attachments/assets/29ef321d-8ddb-4cd3-9c4c-2b6a4b05c281" />
+
+--- 
