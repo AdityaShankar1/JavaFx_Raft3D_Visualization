@@ -12,6 +12,25 @@ Nodes transition through three states:
 - 🟠 **CANDIDATE (Orange)**: If a follower doesn't receive a heartbeat within its randomized election timeout (3-5s), it becomes a candidate and requests votes.
 - 🟢 **LEADER (Green)**: The winner of the election. It sends periodic heartbeats (every 1s) to maintain authority. To simulate a realistic cluster, the leader automatically steps down after a randomized tenure (4-7s), forcing a new election sequence.
 
+## The Raft Consensus Algorithm:
+
+This project implements and visualizes the Raft lifecycle. For a quick visual understanding refer to the image below:
+
+<p align="center">
+<img width="553" height="240" alt="Raft State Machine Diagram" src="https://github.com/user-attachments/assets/770165d4-c92d-48b9-9f7c-686ae337c506" />
+<i>imgsrc: <a href="https://medium.com/@swayamraina/raft-protocol-f710da8621a7">RAFT Protocol by Swayam Raina on Medium</a></i>
+</p>
+
+In a distributed system, Raft ensures all nodes agree on a single source of truth, even if some nodes fail.
+
+**Follower:** The starting state. Nodes remain here as long as they receive regular "heartbeats" from a Leader.
+
+**Candidate**: If a Follower stops hearing from the Leader, it "times out," increments its term, and asks other nodes for votes.
+
+**Leader**: If a Candidate receives a majority of votes, it becomes the Leader and begins sending heartbeats to maintain authority.
+
+**Note**: To simulate a dynamic cluster environment, this visualization forces the Leader to step down after a while triggering a fresh election cycle.
+
 ## Prerequisites
 
 - **Java 21** (e.g., BellSoft Liberica JDK with JavaFX bundled)
