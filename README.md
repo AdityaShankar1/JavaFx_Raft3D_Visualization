@@ -67,3 +67,9 @@ Open a 4th terminal and run the GUI:
 - `Raft3DGui.java`: JavaFX application. Uses asynchronous `HttpClient` to poll node states without blocking the JavaFX Application Thread.
 - `RaftMessageProducer.java` / `RaftMessageConsumer.java`: RabbitMQ integration for inter-node communication.
 - `application.yaml`: Uses Spring Profiles (`node1`, `node2`, `node3`) to isolate ports and node IDs while sharing the same codebase.
+
+## Output Screenshots:
+
+<img width="589" height="256" alt="image" src="https://github.com/user-attachments/assets/93adff25-c243-4d7c-984e-d6a7ac5d0534" />
+
+<img width="586" height="321" alt="image" src="https://github.com/user-attachments/assets/29ef321d-8ddb-4cd3-9c4c-2b6a4b05c281" />
