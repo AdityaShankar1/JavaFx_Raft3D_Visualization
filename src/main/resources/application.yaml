@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: Raft3D
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+# Default node id (override per-instance via --node.id=nodeX on the command line,
+# or by active Spring profile: --spring.profiles.active=node1)
+node:
+  id: node1
+
+---
+spring:
+  config:
+    activate:
+      on-profile: node1
+server:
+  port: 8080
+node:
+  id: node1
+
+---
+spring:
+  config:
+    activate:
+      on-profile: node2
+server:
+  port: 8081
+node:
+  id: node2
+
+---
+spring:
+  config:
+    activate:
+      on-profile: node3
+server:
+  port: 8082
+node:
+  id: node3

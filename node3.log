@@ -1,0 +1,496 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:demo >--------------------------
+[INFO] Building Raft3D 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.3:run (default-cli) > test-compile @ demo >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ demo ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ demo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 18 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ demo ---
+[INFO] skip non existing resourceDirectory /Users/adityashankar/Downloads/demo/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ demo ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] <<< spring-boot:4.0.3:run (default-cli) < test-compile @ demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.3:run (default-cli) @ demo ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-03-10T12:22:40.143+05:30  INFO 5754 --- [Raft3D] [           main] com.example.raftdemo.Raft3DApplication   : Starting Raft3DApplication using Java 21.0.10 with PID 5754 (/Users/adityashankar/Downloads/demo/target/classes started by adityashankar in /Users/adityashankar/Downloads/demo)
+2026-03-10T12:22:40.145+05:30  INFO 5754 --- [Raft3D] [           main] com.example.raftdemo.Raft3DApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T12:22:40.500+05:30  INFO 5754 --- [Raft3D] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-03-10T12:22:40.505+05:30  INFO 5754 --- [Raft3D] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T12:22:40.505+05:30  INFO 5754 --- [Raft3D] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T12:22:40.524+05:30  INFO 5754 --- [Raft3D] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 362 ms
+2026-03-10T12:22:40.783+05:30  INFO 5754 --- [Raft3D] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-03-10T12:22:40.809+05:30  INFO 5754 --- [Raft3D] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-03-10T12:22:40.810+05:30  INFO 5754 --- [Raft3D] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:22:40.813+05:30  INFO 5754 --- [Raft3D] [           main] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused
+2026-03-10T12:22:40.815+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:22:40.816+05:30 ERROR 5754 --- [Raft3D] [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:60) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:629) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:745) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:256) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2241) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2213) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2193) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:472) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:456) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1959) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1923) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1523) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1356) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1355) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1297) ~[amqp-client-5.27.1.jar:5.27.1]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:676) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:644) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:590) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	... 12 common frames omitted
+
+2026-03-10T12:22:40.817+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:22:40.820+05:30  INFO 5754 --- [Raft3D] [           main] com.example.raftdemo.Raft3DApplication   : Started Raft3DApplication in 0.84 seconds (process running for 0.98)
+2026-03-10T12:22:43.649+05:30  INFO 5754 --- [Raft3D] [       Thread-1] c.e.r.service.RaftConsensusService       : Timeout reached. Becoming candidate...
+2026-03-10T12:22:43.650+05:30  INFO 5754 --- [Raft3D] [       Thread-1] c.e.r.service.RaftConsensusService       : Node Node3 became CANDIDATE. Requesting votes...
+2026-03-10T12:22:43.652+05:30  INFO 5754 --- [Raft3D] [       Thread-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+Exception in thread "Thread-1" org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:60)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:629)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:745)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:256)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2241)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2213)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.send(RabbitTemplate.java:1143)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertAndSend(RabbitTemplate.java:1212)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertAndSend(RabbitTemplate.java:1205)
+	at com.example.raftdemo.service.RaftConsensusService.sendHeartbeat(RaftConsensusService.java:65)
+	at com.example.raftdemo.service.RaftConsensusService.startElection(RaftConsensusService.java:60)
+	at com.example.raftdemo.service.RaftConsensusService.lambda$startElectionTimer$0(RaftConsensusService.java:43)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1355)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1297)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:676)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:644)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:590)
+	... 11 more
+2026-03-10T12:22:45.934+05:30  WARN 5754 --- [Raft3D] [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:22:45.938+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@766b6d02: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:22:45.940+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:22:45.941+05:30 ERROR 5754 --- [Raft3D] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:22:45.941+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:22:51.039+05:30  WARN 5754 --- [Raft3D] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:22:51.040+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@60c33ee1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:22:51.042+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:22:51.043+05:30 ERROR 5754 --- [Raft3D] [ntContainer#0-3] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:22:51.043+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:22:56.122+05:30  WARN 5754 --- [Raft3D] [ntContainer#0-3] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:22:56.123+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-3] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4e794cf6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:22:56.125+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:22:56.126+05:30 ERROR 5754 --- [Raft3D] [ntContainer#0-4] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:22:56.126+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:01.218+05:30  WARN 5754 --- [Raft3D] [ntContainer#0-4] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:01.220+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-4] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@39815972: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:01.222+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-5] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:01.223+05:30 ERROR 5754 --- [Raft3D] [ntContainer#0-5] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:01.223+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-5] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:06.304+05:30  WARN 5754 --- [Raft3D] [ntContainer#0-5] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:06.305+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-5] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5ad2f87a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:06.307+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-6] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:06.308+05:30 ERROR 5754 --- [Raft3D] [ntContainer#0-6] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:06.308+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-6] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:11.402+05:30  WARN 5754 --- [Raft3D] [ntContainer#0-6] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:11.403+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-6] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@2f7cf0b3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:11.405+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-7] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:11.407+05:30 ERROR 5754 --- [Raft3D] [ntContainer#0-7] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:11.408+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-7] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:16.497+05:30  WARN 5754 --- [Raft3D] [ntContainer#0-7] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:16.498+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-7] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@217ddffb: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:16.500+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:16.501+05:30 ERROR 5754 --- [Raft3D] [ntContainer#0-8] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:16.502+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:21.573+05:30  WARN 5754 --- [Raft3D] [ntContainer#0-8] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:21.574+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-8] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7d7bd94a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:21.575+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-9] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:21.577+05:30 ERROR 5754 --- [Raft3D] [ntContainer#0-9] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:21.577+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-9] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:26.661+05:30  WARN 5754 --- [Raft3D] [ntContainer#0-9] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:26.662+05:30  INFO 5754 --- [Raft3D] [ntContainer#0-9] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@245cadf3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:26.662+05:30  INFO 5754 --- [Raft3D] [tContainer#0-10] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:26.663+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-10] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:26.663+05:30  INFO 5754 --- [Raft3D] [tContainer#0-10] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:31.746+05:30  WARN 5754 --- [Raft3D] [tContainer#0-10] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:31.747+05:30  INFO 5754 --- [Raft3D] [tContainer#0-10] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@ea311a3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:31.749+05:30  INFO 5754 --- [Raft3D] [tContainer#0-11] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:31.750+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-11] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:31.750+05:30  INFO 5754 --- [Raft3D] [tContainer#0-11] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:36.853+05:30  WARN 5754 --- [Raft3D] [tContainer#0-11] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:36.853+05:30  INFO 5754 --- [Raft3D] [tContainer#0-11] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1bc9c64f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:36.855+05:30  INFO 5754 --- [Raft3D] [tContainer#0-12] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:36.857+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-12] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:36.857+05:30  INFO 5754 --- [Raft3D] [tContainer#0-12] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:41.960+05:30  WARN 5754 --- [Raft3D] [tContainer#0-12] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:41.960+05:30  INFO 5754 --- [Raft3D] [tContainer#0-12] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@37fdb8e9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:41.961+05:30  INFO 5754 --- [Raft3D] [tContainer#0-13] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:41.962+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-13] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:41.962+05:30  INFO 5754 --- [Raft3D] [tContainer#0-13] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:47.067+05:30  WARN 5754 --- [Raft3D] [tContainer#0-13] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:47.068+05:30  INFO 5754 --- [Raft3D] [tContainer#0-13] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@70503f23: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:47.070+05:30  INFO 5754 --- [Raft3D] [tContainer#0-14] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:47.071+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-14] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:47.072+05:30  INFO 5754 --- [Raft3D] [tContainer#0-14] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:52.168+05:30  WARN 5754 --- [Raft3D] [tContainer#0-14] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:52.168+05:30  INFO 5754 --- [Raft3D] [tContainer#0-14] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7959829f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:52.171+05:30  INFO 5754 --- [Raft3D] [tContainer#0-15] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:52.172+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-15] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:52.172+05:30  INFO 5754 --- [Raft3D] [tContainer#0-15] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:57.248+05:30  WARN 5754 --- [Raft3D] [tContainer#0-15] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:23:57.249+05:30  INFO 5754 --- [Raft3D] [tContainer#0-15] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@578e46fb: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:23:57.251+05:30  INFO 5754 --- [Raft3D] [tContainer#0-16] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:23:57.252+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-16] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:23:57.252+05:30  INFO 5754 --- [Raft3D] [tContainer#0-16] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:02.349+05:30  WARN 5754 --- [Raft3D] [tContainer#0-16] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:02.350+05:30  INFO 5754 --- [Raft3D] [tContainer#0-16] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@75d9eded: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:02.352+05:30  INFO 5754 --- [Raft3D] [tContainer#0-17] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:02.354+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-17] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:02.354+05:30  INFO 5754 --- [Raft3D] [tContainer#0-17] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:07.464+05:30  WARN 5754 --- [Raft3D] [tContainer#0-17] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:07.464+05:30  INFO 5754 --- [Raft3D] [tContainer#0-17] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7d34d066: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:07.466+05:30  INFO 5754 --- [Raft3D] [tContainer#0-18] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:07.468+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-18] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:07.468+05:30  INFO 5754 --- [Raft3D] [tContainer#0-18] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:12.569+05:30  WARN 5754 --- [Raft3D] [tContainer#0-18] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:12.570+05:30  INFO 5754 --- [Raft3D] [tContainer#0-18] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7dc210b8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:12.571+05:30  INFO 5754 --- [Raft3D] [tContainer#0-19] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:12.573+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-19] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:12.573+05:30  INFO 5754 --- [Raft3D] [tContainer#0-19] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:17.656+05:30  WARN 5754 --- [Raft3D] [tContainer#0-19] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:17.657+05:30  INFO 5754 --- [Raft3D] [tContainer#0-19] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1e2db03: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:17.659+05:30  INFO 5754 --- [Raft3D] [tContainer#0-20] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:17.660+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-20] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:17.660+05:30  INFO 5754 --- [Raft3D] [tContainer#0-20] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:22.750+05:30  WARN 5754 --- [Raft3D] [tContainer#0-20] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:22.750+05:30  INFO 5754 --- [Raft3D] [tContainer#0-20] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@198a160f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:22.752+05:30  INFO 5754 --- [Raft3D] [tContainer#0-21] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:22.753+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-21] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:22.753+05:30  INFO 5754 --- [Raft3D] [tContainer#0-21] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:27.861+05:30  WARN 5754 --- [Raft3D] [tContainer#0-21] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:27.861+05:30  INFO 5754 --- [Raft3D] [tContainer#0-21] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@2ff73575: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:27.863+05:30  INFO 5754 --- [Raft3D] [tContainer#0-22] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:27.864+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-22] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:27.865+05:30  INFO 5754 --- [Raft3D] [tContainer#0-22] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:32.950+05:30  WARN 5754 --- [Raft3D] [tContainer#0-22] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:32.950+05:30  INFO 5754 --- [Raft3D] [tContainer#0-22] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5b98cbcc: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:32.952+05:30  INFO 5754 --- [Raft3D] [tContainer#0-23] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:32.953+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-23] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:32.953+05:30  INFO 5754 --- [Raft3D] [tContainer#0-23] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:38.023+05:30  WARN 5754 --- [Raft3D] [tContainer#0-23] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:38.024+05:30  INFO 5754 --- [Raft3D] [tContainer#0-23] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1b6bbd31: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:38.026+05:30  INFO 5754 --- [Raft3D] [tContainer#0-24] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:38.027+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-24] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:38.027+05:30  INFO 5754 --- [Raft3D] [tContainer#0-24] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:43.118+05:30  WARN 5754 --- [Raft3D] [tContainer#0-24] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:43.119+05:30  INFO 5754 --- [Raft3D] [tContainer#0-24] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@3e3689b6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:43.121+05:30  INFO 5754 --- [Raft3D] [tContainer#0-25] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:43.122+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-25] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:43.123+05:30  INFO 5754 --- [Raft3D] [tContainer#0-25] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:48.217+05:30  WARN 5754 --- [Raft3D] [tContainer#0-25] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:48.218+05:30  INFO 5754 --- [Raft3D] [tContainer#0-25] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@616ce97d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:48.219+05:30  INFO 5754 --- [Raft3D] [tContainer#0-26] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:48.220+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-26] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:48.220+05:30  INFO 5754 --- [Raft3D] [tContainer#0-26] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:53.315+05:30  WARN 5754 --- [Raft3D] [tContainer#0-26] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:53.316+05:30  INFO 5754 --- [Raft3D] [tContainer#0-26] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@61330be2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:53.317+05:30  INFO 5754 --- [Raft3D] [tContainer#0-27] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:53.318+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-27] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:53.319+05:30  INFO 5754 --- [Raft3D] [tContainer#0-27] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:58.415+05:30  WARN 5754 --- [Raft3D] [tContainer#0-27] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:24:58.415+05:30  INFO 5754 --- [Raft3D] [tContainer#0-27] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@536f4758: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:24:58.417+05:30  INFO 5754 --- [Raft3D] [tContainer#0-28] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:24:58.418+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-28] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:24:58.418+05:30  INFO 5754 --- [Raft3D] [tContainer#0-28] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:03.496+05:30  WARN 5754 --- [Raft3D] [tContainer#0-28] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:03.498+05:30  INFO 5754 --- [Raft3D] [tContainer#0-28] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1c09fc53: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:03.500+05:30  INFO 5754 --- [Raft3D] [tContainer#0-29] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:03.502+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-29] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:03.502+05:30  INFO 5754 --- [Raft3D] [tContainer#0-29] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:08.605+05:30  WARN 5754 --- [Raft3D] [tContainer#0-29] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:08.605+05:30  INFO 5754 --- [Raft3D] [tContainer#0-29] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@69ef1a72: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:08.607+05:30  INFO 5754 --- [Raft3D] [tContainer#0-30] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:08.608+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-30] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:08.608+05:30  INFO 5754 --- [Raft3D] [tContainer#0-30] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:13.703+05:30  WARN 5754 --- [Raft3D] [tContainer#0-30] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:13.704+05:30  INFO 5754 --- [Raft3D] [tContainer#0-30] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6f568154: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:13.706+05:30  INFO 5754 --- [Raft3D] [tContainer#0-31] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:13.708+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-31] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:13.708+05:30  INFO 5754 --- [Raft3D] [tContainer#0-31] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:18.807+05:30  WARN 5754 --- [Raft3D] [tContainer#0-31] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:18.807+05:30  INFO 5754 --- [Raft3D] [tContainer#0-31] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1232b160: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:18.810+05:30  INFO 5754 --- [Raft3D] [tContainer#0-32] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:18.811+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-32] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:18.811+05:30  INFO 5754 --- [Raft3D] [tContainer#0-32] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:23.899+05:30  WARN 5754 --- [Raft3D] [tContainer#0-32] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:23.900+05:30  INFO 5754 --- [Raft3D] [tContainer#0-32] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@3009a18f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:23.902+05:30  INFO 5754 --- [Raft3D] [tContainer#0-33] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:23.903+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-33] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:23.903+05:30  INFO 5754 --- [Raft3D] [tContainer#0-33] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:28.988+05:30  WARN 5754 --- [Raft3D] [tContainer#0-33] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:28.989+05:30  INFO 5754 --- [Raft3D] [tContainer#0-33] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4580dbdb: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:28.991+05:30  INFO 5754 --- [Raft3D] [tContainer#0-34] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:28.992+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-34] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:28.992+05:30  INFO 5754 --- [Raft3D] [tContainer#0-34] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:34.094+05:30  WARN 5754 --- [Raft3D] [tContainer#0-34] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:34.095+05:30  INFO 5754 --- [Raft3D] [tContainer#0-34] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1f2267f1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:34.097+05:30  INFO 5754 --- [Raft3D] [tContainer#0-35] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:34.098+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-35] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:34.098+05:30  INFO 5754 --- [Raft3D] [tContainer#0-35] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:39.183+05:30  WARN 5754 --- [Raft3D] [tContainer#0-35] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:39.183+05:30  INFO 5754 --- [Raft3D] [tContainer#0-35] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5926938: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:39.185+05:30  INFO 5754 --- [Raft3D] [tContainer#0-36] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:39.186+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-36] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:39.186+05:30  INFO 5754 --- [Raft3D] [tContainer#0-36] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:44.281+05:30  WARN 5754 --- [Raft3D] [tContainer#0-36] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:44.282+05:30  INFO 5754 --- [Raft3D] [tContainer#0-36] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@34abb0b8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:44.284+05:30  INFO 5754 --- [Raft3D] [tContainer#0-37] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:44.285+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-37] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:44.285+05:30  INFO 5754 --- [Raft3D] [tContainer#0-37] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:49.386+05:30  WARN 5754 --- [Raft3D] [tContainer#0-37] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:49.387+05:30  INFO 5754 --- [Raft3D] [tContainer#0-37] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@35440271: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:49.388+05:30  INFO 5754 --- [Raft3D] [tContainer#0-38] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:49.389+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-38] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:49.389+05:30  INFO 5754 --- [Raft3D] [tContainer#0-38] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:54.485+05:30  WARN 5754 --- [Raft3D] [tContainer#0-38] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:54.485+05:30  INFO 5754 --- [Raft3D] [tContainer#0-38] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4cc03fe2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:54.488+05:30  INFO 5754 --- [Raft3D] [tContainer#0-39] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:54.489+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-39] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:54.489+05:30  INFO 5754 --- [Raft3D] [tContainer#0-39] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:59.580+05:30  WARN 5754 --- [Raft3D] [tContainer#0-39] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:25:59.580+05:30  INFO 5754 --- [Raft3D] [tContainer#0-39] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@67ebb1f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:25:59.582+05:30  INFO 5754 --- [Raft3D] [tContainer#0-40] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:25:59.583+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-40] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:25:59.584+05:30  INFO 5754 --- [Raft3D] [tContainer#0-40] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:04.686+05:30  WARN 5754 --- [Raft3D] [tContainer#0-40] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:04.687+05:30  INFO 5754 --- [Raft3D] [tContainer#0-40] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4652dcdf: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:04.689+05:30  INFO 5754 --- [Raft3D] [tContainer#0-41] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:04.690+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-41] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:04.691+05:30  INFO 5754 --- [Raft3D] [tContainer#0-41] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:09.788+05:30  WARN 5754 --- [Raft3D] [tContainer#0-41] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:09.789+05:30  INFO 5754 --- [Raft3D] [tContainer#0-41] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@37c922ea: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:09.791+05:30  INFO 5754 --- [Raft3D] [tContainer#0-42] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:09.792+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-42] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:09.792+05:30  INFO 5754 --- [Raft3D] [tContainer#0-42] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:14.881+05:30  WARN 5754 --- [Raft3D] [tContainer#0-42] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:14.882+05:30  INFO 5754 --- [Raft3D] [tContainer#0-42] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6f5f4a82: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:14.884+05:30  INFO 5754 --- [Raft3D] [tContainer#0-43] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:14.886+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-43] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:14.886+05:30  INFO 5754 --- [Raft3D] [tContainer#0-43] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:19.979+05:30  WARN 5754 --- [Raft3D] [tContainer#0-43] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:19.980+05:30  INFO 5754 --- [Raft3D] [tContainer#0-43] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@41b846ad: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:19.982+05:30  INFO 5754 --- [Raft3D] [tContainer#0-44] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:19.983+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-44] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:19.983+05:30  INFO 5754 --- [Raft3D] [tContainer#0-44] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:25.092+05:30  WARN 5754 --- [Raft3D] [tContainer#0-44] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:25.093+05:30  INFO 5754 --- [Raft3D] [tContainer#0-44] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@36cec97c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:25.095+05:30  INFO 5754 --- [Raft3D] [tContainer#0-45] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:25.096+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-45] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:25.096+05:30  INFO 5754 --- [Raft3D] [tContainer#0-45] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:30.186+05:30  WARN 5754 --- [Raft3D] [tContainer#0-45] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:30.187+05:30  INFO 5754 --- [Raft3D] [tContainer#0-45] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@2af5737e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:30.189+05:30  INFO 5754 --- [Raft3D] [tContainer#0-46] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:30.191+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-46] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:30.191+05:30  INFO 5754 --- [Raft3D] [tContainer#0-46] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:35.300+05:30  WARN 5754 --- [Raft3D] [tContainer#0-46] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:35.300+05:30  INFO 5754 --- [Raft3D] [tContainer#0-46] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@33d2baba: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:35.302+05:30  INFO 5754 --- [Raft3D] [tContainer#0-47] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:35.304+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-47] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:35.304+05:30  INFO 5754 --- [Raft3D] [tContainer#0-47] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:40.394+05:30  WARN 5754 --- [Raft3D] [tContainer#0-47] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:40.395+05:30  INFO 5754 --- [Raft3D] [tContainer#0-47] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6c5d6e0b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:40.398+05:30  INFO 5754 --- [Raft3D] [tContainer#0-48] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:40.399+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-48] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:40.399+05:30  INFO 5754 --- [Raft3D] [tContainer#0-48] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:45.504+05:30  WARN 5754 --- [Raft3D] [tContainer#0-48] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:45.504+05:30  INFO 5754 --- [Raft3D] [tContainer#0-48] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6be22033: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:45.505+05:30  INFO 5754 --- [Raft3D] [tContainer#0-49] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:45.506+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-49] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:45.506+05:30  INFO 5754 --- [Raft3D] [tContainer#0-49] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:50.596+05:30  WARN 5754 --- [Raft3D] [tContainer#0-49] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:50.597+05:30  INFO 5754 --- [Raft3D] [tContainer#0-49] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@69a4f853: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:50.599+05:30  INFO 5754 --- [Raft3D] [tContainer#0-50] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:50.600+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-50] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:50.600+05:30  INFO 5754 --- [Raft3D] [tContainer#0-50] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:55.695+05:30  WARN 5754 --- [Raft3D] [tContainer#0-50] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:26:55.696+05:30  INFO 5754 --- [Raft3D] [tContainer#0-50] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@62b0925d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:26:55.698+05:30  INFO 5754 --- [Raft3D] [tContainer#0-51] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:26:55.699+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-51] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:26:55.699+05:30  INFO 5754 --- [Raft3D] [tContainer#0-51] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:00.786+05:30  WARN 5754 --- [Raft3D] [tContainer#0-51] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:00.787+05:30  INFO 5754 --- [Raft3D] [tContainer#0-51] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5f78a3ef: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:00.788+05:30  INFO 5754 --- [Raft3D] [tContainer#0-52] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:00.789+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-52] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:00.789+05:30  INFO 5754 --- [Raft3D] [tContainer#0-52] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:05.885+05:30  WARN 5754 --- [Raft3D] [tContainer#0-52] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:05.887+05:30  INFO 5754 --- [Raft3D] [tContainer#0-52] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5c241e39: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:05.888+05:30  INFO 5754 --- [Raft3D] [tContainer#0-53] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:05.890+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-53] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:05.890+05:30  INFO 5754 --- [Raft3D] [tContainer#0-53] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:10.986+05:30  WARN 5754 --- [Raft3D] [tContainer#0-53] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:10.986+05:30  INFO 5754 --- [Raft3D] [tContainer#0-53] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@670998ad: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:10.988+05:30  INFO 5754 --- [Raft3D] [tContainer#0-54] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:10.989+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-54] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:10.989+05:30  INFO 5754 --- [Raft3D] [tContainer#0-54] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:16.084+05:30  WARN 5754 --- [Raft3D] [tContainer#0-54] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:16.085+05:30  INFO 5754 --- [Raft3D] [tContainer#0-54] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@46d59c49: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:16.086+05:30  INFO 5754 --- [Raft3D] [tContainer#0-55] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:16.088+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-55] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:16.088+05:30  INFO 5754 --- [Raft3D] [tContainer#0-55] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:21.187+05:30  WARN 5754 --- [Raft3D] [tContainer#0-55] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:21.188+05:30  INFO 5754 --- [Raft3D] [tContainer#0-55] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4d06aa43: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:21.189+05:30  INFO 5754 --- [Raft3D] [tContainer#0-56] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:21.190+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-56] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:21.190+05:30  INFO 5754 --- [Raft3D] [tContainer#0-56] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:26.291+05:30  WARN 5754 --- [Raft3D] [tContainer#0-56] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:26.292+05:30  INFO 5754 --- [Raft3D] [tContainer#0-56] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@11e7fdf3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:26.293+05:30  INFO 5754 --- [Raft3D] [tContainer#0-57] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:26.294+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-57] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:26.295+05:30  INFO 5754 --- [Raft3D] [tContainer#0-57] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:31.390+05:30  WARN 5754 --- [Raft3D] [tContainer#0-57] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:31.390+05:30  INFO 5754 --- [Raft3D] [tContainer#0-57] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1d3a8478: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:31.392+05:30  INFO 5754 --- [Raft3D] [tContainer#0-58] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:31.394+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-58] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:31.394+05:30  INFO 5754 --- [Raft3D] [tContainer#0-58] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:36.491+05:30  WARN 5754 --- [Raft3D] [tContainer#0-58] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:36.491+05:30  INFO 5754 --- [Raft3D] [tContainer#0-58] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5cad1f55: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:36.492+05:30  INFO 5754 --- [Raft3D] [tContainer#0-59] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:36.493+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-59] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:36.493+05:30  INFO 5754 --- [Raft3D] [tContainer#0-59] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:41.586+05:30  WARN 5754 --- [Raft3D] [tContainer#0-59] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:41.586+05:30  INFO 5754 --- [Raft3D] [tContainer#0-59] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5792280: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:41.587+05:30  INFO 5754 --- [Raft3D] [tContainer#0-60] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:41.588+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-60] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:41.588+05:30  INFO 5754 --- [Raft3D] [tContainer#0-60] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:46.697+05:30  WARN 5754 --- [Raft3D] [tContainer#0-60] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:46.697+05:30  INFO 5754 --- [Raft3D] [tContainer#0-60] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@2f053aa2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:46.697+05:30  INFO 5754 --- [Raft3D] [tContainer#0-61] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:46.698+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-61] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:46.698+05:30  INFO 5754 --- [Raft3D] [tContainer#0-61] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:51.782+05:30  WARN 5754 --- [Raft3D] [tContainer#0-61] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:51.783+05:30  INFO 5754 --- [Raft3D] [tContainer#0-61] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@64930d33: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:51.783+05:30  INFO 5754 --- [Raft3D] [tContainer#0-62] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:51.784+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-62] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:51.784+05:30  INFO 5754 --- [Raft3D] [tContainer#0-62] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:56.866+05:30  WARN 5754 --- [Raft3D] [tContainer#0-62] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:27:56.866+05:30  INFO 5754 --- [Raft3D] [tContainer#0-62] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4a2cea8b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:27:56.866+05:30  INFO 5754 --- [Raft3D] [tContainer#0-63] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:27:56.867+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-63] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:27:56.867+05:30  INFO 5754 --- [Raft3D] [tContainer#0-63] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:28:01.956+05:30  WARN 5754 --- [Raft3D] [tContainer#0-63] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+2026-03-10T12:28:01.957+05:30  INFO 5754 --- [Raft3D] [tContainer#0-63] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6ec82ead: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:28:01.958+05:30  INFO 5754 --- [Raft3D] [tContainer#0-64] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:28:01.968+05:30  WARN 5754 --- [Raft3D] [ 127.0.0.1:5672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occurred (Exception message: Connection reset)
+2026-03-10T12:28:01.970+05:30  WARN 5754 --- [Raft3D] [:0:0:0:0:1:5672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occurred (Exception message: Connection reset)
+2026-03-10T12:28:01.971+05:30 ERROR 5754 --- [Raft3D] [tContainer#0-64] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2026-03-10T12:28:01.971+05:30  INFO 5754 --- [Raft3D] [tContainer#0-64] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:28:01.972+05:30  WARN 5754 --- [Raft3D] [ 127.0.0.1:5672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occurred (Exception message: Connection reset)
+2026-03-10T12:28:01.972+05:30  WARN 5754 --- [Raft3D] [:0:0:0:0:1:5672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occurred (Exception message: Connection reset)
+2026-03-10T12:28:07.062+05:30  WARN 5754 --- [Raft3D] [tContainer#0-64] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it
+
+org.springframework.amqp.AmqpIOException: java.io.IOException
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:69) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:629) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:745) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:256) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:330) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:139) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:100) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:83) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:631) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1524) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1356) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:140) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:136) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:414) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1357) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1297) ~[amqp-client-5.27.1.jar:5.27.1]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:676) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:644) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:590) ~[spring-rabbit-4.0.2.jar:4.0.2]
+	... 10 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:552) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:341) ~[amqp-client-5.27.1.jar:5.27.1]
+	... 15 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:291) ~[na:na]
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:325) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:312) ~[na:na]
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295) ~[na:na]
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:92) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:199) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:694) ~[amqp-client-5.27.1.jar:5.27.1]
+	... 1 common frames omitted
+
+2026-03-10T12:28:07.065+05:30  INFO 5754 --- [Raft3D] [tContainer#0-64] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@318ec8b3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-03-10T12:28:07.067+05:30  INFO 5754 --- [Raft3D] [tContainer#0-65] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-10T12:28:07.092+05:30  INFO 5754 --- [Raft3D] [tContainer#0-65] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#388c519:130/SimpleConnection@77c9f9d9 [delegate=amqp://guest@127.0.0.1:5672/, localPort=50719]
+2026-03-10T12:28:07.096+05:30  INFO 5754 --- [Raft3D] [tContainer#0-65] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (spring.gen-5S007MM-RaG4jpgK_bp3Yg) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15:10 min
+[INFO] Finished at: 2026-03-10T12:37:48+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.0.3:run (default-cli) on project demo: Process terminated with exit code: 137 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
